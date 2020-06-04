@@ -16,18 +16,19 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7 # Not needed with a .ruby-version file
+    - run: bundle install --path vendor/bundle
     # Runs a single command using the runners shell
-    - name: install dependencies
+    - name: zip file
       run: |
-        bundle install --path vendor/bundle
         zip -r function.zip function.rb vendor
-
     - name: AWS Update Lambda Action
       uses: stcalica/update-lambda@0.0.2
       with:
