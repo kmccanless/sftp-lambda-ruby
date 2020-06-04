@@ -34,7 +34,7 @@ def handler(*)
       bucket = param.value
       puts "bucket is #{bucket}"
     elsif param.name == 'sftp-key'
-      bucket = param.value
+      key = param.value
       puts "key is #{key}"
     end
   end
