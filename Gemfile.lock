@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    net-sftp (3.0.0)
+      net-ssh (>= 5.0.0, < 7.0.0)
+    net-ssh (6.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  net-sftp (= 3.0.0)
+
+BUNDLED WITH
+   2.1.4
