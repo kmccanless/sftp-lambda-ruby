@@ -34,6 +34,6 @@ jobs:
       with:
         package: function.zip
         function-name: ruby-test
-        AWS_SECRET_KEY:  ${{ secrets.AWS_SECRET_KEY }}
-        AWS_SECRET_ID:  ${{ secrets.AWS_SECRET_ID }}
+        AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_SECRET_KEY }}
+        AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ID }}
         AWS_REGION:  ${{ secrets.AWS_REGION }}
